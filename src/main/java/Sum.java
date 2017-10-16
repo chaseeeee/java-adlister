@@ -13,14 +13,16 @@ public class Sum extends HttpServlet{
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
           throws IOException {
 
-    int a=1, b=1;
+    int a=1, b=1, c=1;
 
     a = Integer.parseInt(request.getParameter("num1"));
     b = Integer.parseInt(request.getParameter("num2"));
 
+    c++;
+
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    out.println("<h3>Sum res:" + a * b);
+    out.println("<h3>HIT COUNT IS:" + c);
 
   }
 
