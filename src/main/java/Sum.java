@@ -10,7 +10,8 @@ import java.io.PrintWriter;
 
 public class Sum extends HttpServlet{
 
-  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+  protected void doGet(HttpServletRequest request,
+                       HttpServletResponse response)
           throws IOException {
 
     int a=1, b=1, c=1;
@@ -18,12 +19,15 @@ public class Sum extends HttpServlet{
     a = Integer.parseInt(request.getParameter("num1"));
     b = Integer.parseInt(request.getParameter("num2"));
 
-    c++;
-
-    response.setContentType("text/html");
-    PrintWriter out = response.getWriter();
-    out.println("<h3>HIT COUNT IS:" + c);
-
+    /*if (a.equals("")) {
+      response.getWriter().print("<h1>Your querystring was null!");
+    }
+    else {
+      response.setContentType("text/html");
+      PrintWriter out = response.getWriter();
+      out.println("<h3>HIT COUNT IS:" + a * b);
+    }
+*/
   }
 
 }
