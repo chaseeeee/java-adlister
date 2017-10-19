@@ -1,16 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: chasehammock
-  Date: 10/18/17
-  Time: 11:50 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <%@ include file="/partials/head.jsp" %>
 </head>
 <body>
-    <%@ include file="/partials/navbar.jsp" %>
+<%@ include file="/partials/navbar.jsp" %>
+
+<c:forEach var="ad" items="${ads}">
+    <h1>${ad.title}</h1>
+    <p>${ad.description}</p>
+</c:forEach>
+what the hell
 </body>
 </html>

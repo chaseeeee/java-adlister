@@ -9,7 +9,7 @@
     <jsp:include page="partials/navbar.jsp" />
 
     <div class="container">
-        <h1><a href="http://localhost/showads/">Show all ads: >></a></h1>
+        <h1><a href="http://localhost:8080/ads">Show all ads: >></a></h1>
     </div>
 
 </body>
